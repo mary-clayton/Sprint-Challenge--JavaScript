@@ -48,7 +48,8 @@ a. window binding: if none of rules apply, it defaults to window object unless y
 b. implicit binding: when a function is invoked, look in the left of the dot
 
 c. explicit binding: points to a certain value using call, apply, or bind; call, apply or bind are used to invoke a function with a specific value of “this”
-d.new binding: using new keyword constructs a new object and ‘this’ points to it.
+
+d. new binding: using new keyword constructs a new object and ‘this’ points to it.
 
 5. Why do we need super() in an extended class?
 
