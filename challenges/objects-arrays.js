@@ -89,11 +89,11 @@ The resulting contact information strings should have a space between the first 
 "Josh josh@example.com"
 
 Log the result of your new array. */
-const contactInfo = graduates.map(graduates=>graduates.first_name);
-const email = graduates.map(graduates=>graduates.email);
-const joined = contactInfo.join(email)
-console.log(joined);
-
+const contactInfo = []; 
+graduates.map(function(graduates){
+contactInfo.push( `${graduates.first_name}  ${graduates.email}`);
+console.log(contactInfo);
+});
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = graduates.map(graduates=> graduates.university.includes ('Uni') )
 console.log(unisWithUni);
@@ -121,8 +121,9 @@ const zooAnimals = [
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const displayNames = zooAnimals.forEach(function(zooAnimals){
-  return zooAnimals.animal_name && zooAnimals.scientific_name;
+const displayNames = []
+zooAnimals.forEach(function(zooAnimals){
+displayNames.push( `${zooAnimals.animal_name}  ${zooAnimals.scientific_name}`);
 });
 console.log(displayNames);
 
